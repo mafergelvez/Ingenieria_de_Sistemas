@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de Ingeniería de Sistemas</title>
+    <style>
+        :root {
+            --primary-color: #0d1b2a;
+            --secondary-color: #1b263b;
+            --accent-color: #00b4d8;
+            --text-color: #e0e1dd;
+            --card-hover: #273e5c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Secciones de texto informativo */
+        .info-section {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Sección Multimedia */
+        .multimedia-section {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* Relación de aspecto 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin-top: 1.5rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Sección Interactiva - Pilares de Formación */
+        .grid-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            border-left: 4px solid transparent;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: var(--card-hover);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-content {
+            display: none;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #ccc;
+            text-align: justify;
+        }
+
+        /* Clase activa para alternar visibilidad con el script */
+        .card.active .card-content {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ingeniería de Sistemas</h1>
+        <p>Innovación, diseño y desarrollo tecnológico para el futuro de la sociedad.</p>
+    </header>
+
+    <div class="container">
+
+        <div class="info-section">
+            <h2>Importancia en la Sociedad</h2>
+            <p>Se reconoce a la Ingeniería de Sistemas como el motor fundamental de la transformación digital. Se
+                optimizan recursos, se automatizan procesos críticos y se diseñan infraestructuras tecnológicas que
+                impactan de manera directa en la evolución de sectores clave como la salud, la economía, la educación y
+                la seguridad global.</p>
+        </div>
+
+        <div class="info-section">
+            <h2>¿Por qué estudiar esta carrera?</h2>
+            <p>Se adquieren competencias altamente analíticas y de resolución estructurada de problemas. Se fomenta la
+                capacidad de materializar ideas abstractas en soluciones lógicas computacionales, asegurando una
+                adaptación continua a los constantes cambios e innovaciones del entorno digital.</p>
+        </div>
+
+        <div class="info-section">
+            <h2>Oferta en el Mundo Laboral</h2>
+            <p>Se evidencia una demanda expansiva y continua de profesionales a nivel global. Las oportunidades de
+                desempeño profesional abarcan la construcción de software, la implementación de ciberseguridad, el
+                diseño de arquitecturas en la nube, la inteligencia artificial y la gestión de grandes volúmenes de
+                datos. Se garantiza una alta proyección, competitividad y versatilidad laboral.</p>
+        </div>
+
+        <div class="info-section">
+            <h2>¿Por qué elegir la UFPS?</h2>
+            <p>Se destaca la Universidad Francisco de Paula Santander (UFPS) por su riguroso enfoque académico y su
+                fuerte compromiso con el desarrollo regional. Se imparte un plan de estudios que equilibra los
+                fundamentos teóricos sólidos con la aplicación práctica en laboratorios y proyectos de impacto real,
+                formando profesionales críticos y altamente capacitados para liderar el sector tecnológico.</p>
+        </div>
+
+        <section class="multimedia-section">
+            <h2>La Ingeniería de Sistemas en la Actualidad</h2>
+            <p>Se presenta un análisis audiovisual institucional sobre el panorama y la realidad del programa:</p>
+            <div class="video-container">
+                <video controls width="100%" height="100%" style="position: absolute; top: 0; left: 0;">
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="info-section" style="background-color: transparent; box-shadow: none; padding: 0;">
+            <h2 style="text-align: center; display: block; border-bottom: none; margin-bottom: 0.5rem;">Pilares de
+                Formación</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Haz clic en cada área para visualizar los detalles de
+                implementación académica.</p>
+
+            <div class="grid-areas">
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>💻 Desarrollo Web Full-Stack</h3>
+                    <div class="card-content">
+                        Se implementan arquitecturas modernas. Se construyen interfaces dinámicas y se gestiona la
+                        lógica del lado del servidor (APIs, serialización de datos).
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>🗄️ Gestión de Bases de Datos</h3>
+                    <div class="card-content">
+                        Se modelan entidades y relaciones. Se administran bases de datos relacionales garantizando la
+                        integridad y optimización de las consultas.
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>⚙️ Sistemas Operativos</h3>
+                    <div class="card-content">
+                        Se analizan las estructuras subyacentes del hardware. Se configuran procesos, gestión de
+                        memoria, hilos y esquemas de seguridad informática.
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>⚛️ Ciencias Básicas</h3>
+                    <div class="card-content">
+                        Se aplican principios matemáticos y físicos (como análisis de ondas y acústica) para fundamentar
+                        el razonamiento lógico y la resolución de problemas.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Proyecto de Multimedia | Programa de Ingeniería de Sistemas</p>
+    </footer>
+
+    <script>
+        // Lógica interactiva para desplegar el contenido de las tarjetas al hacer clic
+        function toggleCard(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
